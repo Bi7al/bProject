@@ -1,6 +1,6 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/genai";
 
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+const genAI = new GoogleGenerativeAI({api_key:"AIzaSyC1o5kH4nAZuR2B0TCiEpyYji9kLXhY4_I"});
 
 export default async function handler(req, res) {
   // ✅ CORS headers
