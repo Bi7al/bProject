@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     const result = await model.generateContent(prompt);
     res.status(200).json({ output: result.response.text() });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: err.message });
+    
+    res.status(500).json({ error: err});
   }
 }
