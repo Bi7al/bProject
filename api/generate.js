@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     if (!apiKey) throw new Error("Missing GOOGLE_API_KEY environment variable");
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = req.query.prompt || "Hello from Vercel!";
     const result = await model.generateContent(prompt);
